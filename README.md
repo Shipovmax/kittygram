@@ -1,43 +1,43 @@
-### Как запустить проект:
+### How to Run the Project
 
-Клонировать репозиторий и перейти в него в командной строке:
+Clone the repository and navigate to it in the terminal:
 
-```
+```bash
 git clone https://github.com/yandex-praktikum/kittygram.git
 ```
 
-```
+```bash
 cd kittygram
 ```
 
-Cоздать и активировать виртуальное окружение:
+Create and activate a virtual environment:
 
-```
+```bash
 python3 -m venv env
 ```
 
-```
+```bash
 source env/bin/activate
 ```
 
-Установить зависимости из файла requirements.txt:
+Install dependencies from `requirements.txt`:
 
-```
+```bash
 python3 -m pip install --upgrade pip
 ```
 
-```
+```bash
 pip install -r requirements.txt
 ```
 
-Выполнить миграции:
+Apply database migrations:
 
-```
+```bash
 python3 manage.py migrate
 ```
 
-Запустить проект:
+Start the development server:
 
-```
+```bash
 python3 manage.py runserver
 ```
