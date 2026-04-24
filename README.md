@@ -1,43 +1,47 @@
-### How to Run the Project
+# Kittygram (starter)
 
-Clone the repository and navigate to it in the terminal:
+Minimal Django REST Framework API for cats — the base template from which [kittygram_backend](https://github.com/Shipovmax/kittygram_backend) was developed.
+
+> For the full-featured version with auth, achievements, image upload, and Docker deployment see [kittygram_final](https://github.com/Shipovmax/kittygram_final).
+
+---
+
+## What's here
+
+- `Cat` model — `name`, `color`, `birth_year`
+- `CatViewSet` — full CRUD via `ModelViewSet`
+- `SimpleRouter` — routes registered at `/cats/`
+- No auth, no pagination, no image upload
+
+---
+
+## Tech Stack
+
+| | |
+|---|---|
+| Framework | Django 5.1, DRF 3.15 |
+| Database | SQLite3 |
+
+---
+
+## Quick Start
 
 ```bash
-git clone https://github.com/yandex-praktikum/kittygram.git
-```
-
-```bash
+git clone https://github.com/Shipovmax/kittygram
 cd kittygram
-```
 
-Create and activate a virtual environment:
-
-```bash
-python3 -m venv env
-```
-
-```bash
-source env/bin/activate
-```
-
-Install dependencies from `requirements.txt`:
-
-```bash
-python3 -m pip install --upgrade pip
-```
-
-```bash
+python3 -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
+
+python manage.py migrate
+python manage.py runserver
 ```
 
-Apply database migrations:
+API at `http://127.0.0.1:8000/cats/`
 
-```bash
-python3 manage.py migrate
-```
+---
 
-Start the development server:
+## Author
 
-```bash
-python3 manage.py runserver
-```
+- GitHub: [Shipovmax](https://github.com/Shipovmax)
+- Email: shipov.max@icloud.com
