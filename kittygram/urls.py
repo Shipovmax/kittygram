@@ -4,17 +4,17 @@ from django.urls import include, path
 
 from cats.views import CatViewSet
 
-# Создаётся роутер
+# Create the router.
 router = SimpleRouter()
-# Вызываем метод .register с нужными параметрами
+# Register the viewset under the desired URL prefix.
 router.register('cats', CatViewSet)
-# В роутере можно зарегистрировать любое количество пар "URL, viewset":
-# например
+# Any number of "URL, viewset" pairs can be registered on the router,
+# e.g.:
 # router.register('owners', OwnerViewSet)
-# Но нам это пока не нужно
+# but that's not needed here yet.
 
 urlpatterns = [
-    # Все зарегистрированные в router пути доступны в router.urls
-    # Включим их в головной urls.py
+    # All routes registered on the router are exposed via router.urls;
+    # include them in the project's root urlconf.
     path('', include(router.urls)),
 ]
